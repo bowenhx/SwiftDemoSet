@@ -8,13 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.white
-        
-        
+        self.view.backgroundColor = UIColor.yellow
+
     }
 
 

@@ -1,5 +1,8 @@
 {
-    "fullName": "Federico Zanetello",
+    "fullName": "test123",
     "id": 123456,
-    "twitter": "http://twitter.com/zntfdr"
+    "twitter": "http://twitter.com/zntfdr",
+    "email": "123@qq.com",
+    "type": "",
+    "fine": 0
 }

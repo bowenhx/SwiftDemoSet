@@ -17,7 +17,6 @@ extension UIViewController {
         if isPush {
             // 暂时在这里隐藏，后面放到导航扩展里面
             self.navigationController?.pushViewController(controller, animated: true)
-            controller.tabBarController?.hidesBottomBarWhenPushed = true
         } else {
             self.present(controller, animated: true, completion: nil)
         }

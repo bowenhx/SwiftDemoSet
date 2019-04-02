@@ -1,9 +1,12 @@
-//
-//  example2.json
-//  SwiftDemoSet
-//
-//  Created by ligb on 2018/12/19.
-//  Copyright © 2018 com.professional.cn. All rights reserved.
-//
-
-import Foundation
+{
+    "nick_name": "Durian",
+    "points": 600,
+    "ability": {
+        "mathematics": "excellent",
+        "physics": "bad",
+        "chemistry": "fine",
+        "type_str": "public",
+        "url_str": "https://www.baidu.com"
+    },
+    "description_str": "A fruit with a distinctive scent."
+}

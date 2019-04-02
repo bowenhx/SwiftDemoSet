@@ -8,10 +8,10 @@
 
 import UIKit
 
-class HomeTableViewController: UITableViewController {
+class HomeViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource {
 
     public var dataSource = [String]()
-    
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,28 +19,29 @@ class HomeTableViewController: UITableViewController {
         dataSource.append("ViewController")
     }
 
+    
     // MARK: - Table view data source
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataSource.count
     }
 
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = dataSource[indexPath.row]
         return cell
     }
 
 
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         self.showNextController(className: dataSource[indexPath.row], isPush: true)
 //        let viewController = ViewController.init(nibName: <#T##String?#>, bundle: <#T##Bundle?#>)
 //        self.navigationController?.pushViewController(viewController, animated: true)
-        
+
     }
 
 }
